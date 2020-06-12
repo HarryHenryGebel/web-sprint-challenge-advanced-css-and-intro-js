@@ -309,10 +309,14 @@ function addArtist(newArtist){
 
    For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(artistsArray){
+    const newArray = [];
 
-    /* Code here */
+    for (artist of artistsArray)
+        if (artist.paintings > 100)
+            newArray.push(artist.name);
 
+    return newArray;
 }
 
 
