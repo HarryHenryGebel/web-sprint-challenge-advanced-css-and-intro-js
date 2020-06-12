@@ -236,9 +236,11 @@ function getArtistByIndex(array, index) {
 
    /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who lived in the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
+function get20s(artistArray) {
+    function test20th (year) {
+        // the 20th century started in 1901, not 1900
+        return ((year >= 1901) && (year <= 2000)) ;
+    }
 
 }
 
