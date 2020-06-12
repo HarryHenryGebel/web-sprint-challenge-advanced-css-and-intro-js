@@ -286,10 +286,19 @@ function removeArtist(artistArray, index) {
 
    At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(newArtist){
+    newArtistObject = {
+        id: artists.length,
+        name: newArtist[0],
+        years: newArtist[1],
+        genre: newArtist[2],
+        nationality: newArtist[3],
+        bio: newArtist[4],
+        paintings: newArtist[5],
+        wikipedia: newArtist[6]
+    };
+    artists.push(newArtistObject);
+    console.log(artists);
 }
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument:
