@@ -242,8 +242,18 @@ function get20s(artistArray) {
         return ((year >= 1901) && (year <= 2000)) ;
     }
 
-}
+    const nameArray = [];
 
+    for(artist of artistArray) {
+        years = artist.years.split(" - ");
+        birthYear = parseInt(years[0]);
+        deathYear = parseInt(years[1]);
+        if(test20th(birthYear) || test20th(deathYear))
+            nameArray.push(artist.name);
+    }
+
+    return nameArray;
+}
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
